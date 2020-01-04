@@ -3,13 +3,20 @@
     padding: 0;
 }
 
-.navigation-container{
+.navigation-container {
+    position: fixed;
+    top: 0;
     height: 50px;
     background-color: black;
     color: white;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    z-index: 5000;
+}
+
+a{
+    text-decoration: none !important;
 }
 
 a:link,  a:active, a:visited{
@@ -24,7 +31,7 @@ a:link,  a:active, a:visited{
 a:hover{
     background-color: #312923;
     color: #fff930 !important;
-    border-radius: 25px;
+    border-radius: 10px;
     font-size: 16px;
     text-decoration: none !important;
 }
@@ -61,19 +68,30 @@ a > span {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(4,125px);
     grid-column: 3/3;
+    animation-name: right-image-slide-left;
+    animation-duration: 2s;
+}
+
+.nav-item{
+    font-weight: bold;
+    padding-top: 15px;
 }
 
 .nav-item-l{
+    text-align: center;
     color: white !important;
-    font-weight: bold;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 20% 1fr;
 }
 
 .nav-item-r{
     color: #ffb42e !important;
-    font-weight: bold;
+}
+
+.nav-item-l > i, .nav-item-l > span{
+    display: inline;
+}
+
+.nav-item-l > i{
+    vertical-align: bottom;
 }
 
 .main-image-container{
@@ -88,6 +106,8 @@ a > span {
     background-image: linear-gradient(rgba(52, 26, 15, 0.83), rgba(255, 59, 0, 0.45)),url("../assets/img/img/kampus-iz-zraka-min-1.jpg");
     height: 100%;
     width: 100%;
+    animation-name: left-image-slide-right;
+    animation-duration: 1s;
 }
 
 .main-page-image-2{
@@ -100,6 +120,8 @@ a > span {
     z-index: 9;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
+    animation-name: right-image-slide-left;
+    animation-duration: 1s;
 }
 
 html,body{
@@ -133,11 +155,14 @@ canvas {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
+    animation-name: fadein;
+    animation-duration: 2s;
 }
 
 .main-title{
     text-align: center;
     grid-column: 1/7;
+    grid-row: 2/2;
     font-size: 60px;
 }
 
@@ -158,6 +183,8 @@ canvas {
     grid-column: 5/5;
     grid-row: 3/3;
     text-align: right;
+    animation-name: fadein;
+    animation-duration: 3s;
 }
 
 .about-us-text{
@@ -170,4 +197,193 @@ canvas {
     grid-row: 9/5;
     background-color: rgba(3, 3, 4, 0.48);
     border-radius: 25px;
+}
+
+.cards-container{
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding-right: 130px;
+    padding-left: 130px;
+    gap: 10px;
+}
+
+.card{
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    border: #2d304b;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.card > img{
+    margin-top: 15px;
+    align-self: center;
+    width: 50%;
+    height: auto;
+    max-height: 175px;
+    bottom: 0;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.card-title > span {
+    color: #4f8aff;
+    font-size: 20px;
+}
+
+.card-body{
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.breakpoint-title-container{
+    margin-top: 50px;
+    color: #cc2222;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.breakpoint-title-container > h1, .breakpoint-title-container > i {
+    display: inline;
+}
+
+.breakpoint-title-container > i {
+    vertical-align: bottom;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.breakpoint-title-container > h1{
+    font-size: 50px;
+}
+
+.history-body{
+    font-size: 25px;
+    padding: 100px 300px 100px 300px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: black;
+    opacity: 0;
+}
+
+.sponsors-container{
+    align-content: center;
+    padding-right: 130px;
+    padding-left: 130px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-bottom: 100px;
+}
+
+.sponsor-title{
+    font-size: 25px;
+}
+
+.sponsor-card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: baseline;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.location-info-container{
+    margin-top: 100px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.location-info-card{
+    color: black;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr
+}
+
+.location-info{
+    text-align: left;
+    padding: 15px;
+}
+
+.location-info > div {
+    padding: 25px;
+}
+
+.location-info > i {
+    vertical-align: bottom;
+}
+
+.location-info > h3, .location-info > i {
+    display: inline;
+    color: #0707bd;
+}
+
+.map-container{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    background-image:linear-gradient(rgba(52, 26, 15, 0.21), rgba(255, 59, 0, 0.45)), url("../assets/img/img/zaiskri-bg.jpg");
+    padding: 50px 225px 50px 225px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.map-container > h1 {
+    margin-top: 20px;
+}
+
+.map-container >h2{
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 15px;
+    font-weight: bolder;
+    font-size: 60px;
+    color: #cc2222;
+}
+
+
+@keyframes left-image-slide-right{
+    0% {
+        transform: translateX(-500px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes right-image-slide-left {
+    0% {
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

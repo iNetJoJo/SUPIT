@@ -3,10 +3,10 @@ var canvas;
 var ctx;
 var config = {
     sparkFreq: 1,
-    meanSparkSize: 0.012,
+    meanSparkSize: 0.004,
     meanSparkLife: 500,
     meanSparkVelocity: [ 2, 6 ],
-    sparkSizeVariation: 5,
+    sparkSizeVariation: 2,
     sparkBlink: 10, // Lower is more blink
     floorHeight: 0.15
 };
