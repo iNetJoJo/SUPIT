@@ -20,12 +20,10 @@ a{
 }
 
 a:link,  a:active, a:visited{
-    text-align: center;
     height: 100%;
     margin-left: 5px;
     margin-right: 5px;
     font-size: 15px;
-    width: 100%;
 }
 
 a:hover{
@@ -33,7 +31,7 @@ a:hover{
     color: #fff930 !important;
     border-radius: 10px;
     font-size: 16px;
-    text-decoration: none !important;
+    height: 100%;
 }
 
 a > span {
@@ -62,6 +60,7 @@ a > span {
     gap: 15px
 }
 
+
 .navigation-right{
     height: 100%;
     display: grid;
@@ -73,25 +72,35 @@ a > span {
 }
 
 .nav-item{
+    display: table;
+    vertical-align: middle;
+    text-align: center !important;
     font-weight: bold;
-    padding-top: 15px;
-}
-
-.nav-item-l{
-    text-align: center;
-    color: white !important;
+    width: 100%;
+    line-height: 50px;
+    vertical-align: center !important;
+    position: relative;
 }
 
 .nav-item-r{
     color: #ffb42e !important;
+    height: 100%;
+}
+
+.nav-item-l{
+    color: white !important;
 }
 
 .nav-item-l > i, .nav-item-l > span{
     display: inline;
 }
 
+.nav-item-l > a, .nav-item-l > i {
+    vertical-align: middle;
+}
+
 .nav-item-l > i{
-    vertical-align: bottom;
+    margin-right: 5px;
 }
 
 .main-image-container{
@@ -355,6 +364,29 @@ canvas {
 }
 
 
+.background-laptop{
+    position: relative;
+    text-align: center;
+}
+
+.typer{
+    font-size: 60px;
+    color: white;
+    position:absolute;
+    top: 50%;
+    left: 2em;
+    z-index:1;
+}
+
+.typer > p, typer > span {
+    display: inline;
+}
+
+#shell{
+    color: #45f519;
+}
+
+
 @keyframes left-image-slide-right{
     0% {
         transform: translateX(-500px);
@@ -374,7 +406,6 @@ canvas {
 }
 
 
-
 @keyframes fadein {
     0%{
         opacity: 0;
@@ -386,4 +417,28 @@ canvas {
     100%{
         opacity: 1;
     }
+}
+
+
+#cursor {
+    animation:500ms blinker linear infinite;
+    color: white;
+}
+
+@-moz-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }
