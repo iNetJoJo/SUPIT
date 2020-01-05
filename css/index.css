@@ -386,6 +386,119 @@ canvas {
     color: #45f519;
 }
 
+.news-container{
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    display: grid;
+    grid-template-rows:repeat(3, 1fr);
+    grid-template-columns: 1fr;
+}
+
+.news-container > h1 {
+    height: 100px;
+    line-height: 6em;
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.news-items{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 15%;
+    gap: 150px;
+    padding-right: 15%;
+    padding-bottom: 30px;
+}
+
+.footer-news{
+    background-image: url("../assets/img/img/zaiskri-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.footer-news > h1{
+    color: white;
+}
+
+.footer-news > h2{
+    color: #b91c1c;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 60px;
+}
+
+.news-circle{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding-top: 20px;
+    text-align: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: whitesmoke solid;
+    border-width: 20px;
+    box-shadow: 10px 0 #80808036, 0 10px #80808036, -10px 0 #80808036, 0 -10px #80808036;
+    animation-name: zoomin;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.news-circle:hover{
+    animation-name: hoverzoom;
+    animation-duration: 1s;
+}
+
+@keyframes hoverzoom {
+    0%{
+
+    }
+    100%{
+        transform: scale(1.1) translateY(-5%);
+    }
+}
+
+@keyframes zoomin {
+    0%{
+        transform: scale(0);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.news-circle > span {
+    font-size: 25px;
+    margin-top: 20px;
+    color: orange;
+    font-weight: bold;
+}
+
+.news-circle > div{
+    font-size: 20px;
+    margin-top: 50px;
+    color: white;
+    padding: 15px;
+    vertical-align: bottom;
+    height: 100%;
+    line-height: 25px;
+
+}
+
+#circ-1{
+    background-image: url("../assets/img/img/novost1.jpg");
+}
+#circ-2{
+    background-image: url("../assets/img/img/novost2.jpg");
+}
+#circ-3{
+    background-image: url("../assets/img/img/novost3.jpg");
+}
+
 
 @keyframes left-image-slide-right{
     0% {
@@ -423,18 +536,6 @@ canvas {
 #cursor {
     animation:500ms blinker linear infinite;
     color: white;
-}
-
-@-moz-keyframes blinker {
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
-}
-
-@-webkit-keyframes blinker {
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
 }
 
 @keyframes blinker {
