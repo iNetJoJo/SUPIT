@@ -29,7 +29,7 @@
             <i class="material-icons nav-icon">info</i>
             <span>Novosti</span>
         </a>
-        <a href="subjects.html" class="nav-item nav-item-l">
+        <a href="#" class="nav-item nav-item-l">
             <i class="material-icons nav-icon">info</i>
             <span>Nastavni plan</span>
         </a>
@@ -39,23 +39,38 @@
         </a>
     </div>
 </header>
-<div class="background-laptop">
-    <video autoplay muted loop id="myVideo">
-        <source src="../assets/img/video/typingOnlaptop.mp4" type="video/mp4">
-=
-    </video>
-    <div class="typer">
-        <span id="shell">iUseArchLinux@desktop:~$ </span>
-        <p id="inputText">
+<div class="news-container">
+    <h1>Nastavni Plan</h1>
+    <div class="data-container">
+        <div class="search-cell">
+            <input id="subject-search" type="text" autocomplete="on">
+            <div class="suggestion-box">
+                <ul id="auto-complete-list">
+                </ul>
+            </div>
+        </div>
+        <div class="data-cell">
+            <table id="subject-table">
+                <tr id="table-first-entry">
+                    <th>Kolegij</th>
+                    <th>ECTS</th>
+                    <th>Sati</th>
+                    <th>P</th>
+                    <th>V</th>
+                    <th>Tip</th>
+                    <th></th>
+                </tr>
 
-
-        </p>
-        <span id="cursor">&#9646;</span>
+            </table>
+        </div>
+    </div>
+    <div class="footer-news">
+        <h1>BUDI IZVRSTAN U ONOM STO VOLIS</h1>
+        <h2>ZAISKRI</h2>
     </div>
 </div>
 
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../js/main-page/typer.js"></script>
+<script src="../js/subjects-data-fetch.js"></script>
 </body>
 </html>

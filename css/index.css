@@ -390,13 +390,13 @@ canvas {
     font-family: 'Montserrat', sans-serif;
     height: 100%;
     display: grid;
-    grid-template-rows:repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 25%;
     grid-template-columns: 1fr;
 }
 
 .news-container > h1 {
     height: 100px;
-    line-height: 6em;
+    padding: 100px;
     text-align: center;
     font-size: 55px;
     font-weight: bold;
@@ -417,7 +417,7 @@ canvas {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    padding: 100px;
+    padding: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
     font-size: 30px;
@@ -434,6 +434,9 @@ canvas {
 }
 
 .news-circle{
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding-top: 20px;
     text-align: center;
@@ -444,20 +447,128 @@ canvas {
     box-shadow: 10px 0 #80808036, 0 10px #80808036, -10px 0 #80808036, 0 -10px #80808036;
     animation-name: zoomin;
     animation-duration: 1s;
-    animation-iteration-count: 1;
 }
 
-.news-circle:hover{
-    animation-name: hoverzoom;
+.news-circle-outer:hover{
+    animation-name: hoverzoomin;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.news-circle-outer:hover:after{
+    animation-name: hoverzoomout;
     animation-duration: 1s;
 }
 
-@keyframes hoverzoom {
+.news-body{
+    padding: 3%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+}
+
+.news-title{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 25px;
+    text-align: center;
+    color: #ffb42e;
+    padding: 130px;
+}
+
+.news-title > h1 {
+    background-color: #5836154f;
+    border-radius: 15px;
+}
+
+#news-1-title{
+    background-image: url("../assets/img/img/novost1.jpg");
+}
+
+#news-2-title{
+    background-image: url("../assets/img/img/novost2.jpg");
+}
+
+#news-3-title{
+    background-image: url("../assets/img/img/novost3.jpg");
+}
+
+.data-container{
+    display: grid;
+    text-align: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#subject-search{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
+    height: 20px;
+    width: 100%;
+}
+
+.search-cell{
+    display: grid;
+    grid-template-rows: 20px 1fr;
+    grid-template-columns: 1fr 70% 1fr;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.search-cell > input{
+    margin-top: 50px;
+    grid-column: 2/2;
+    grid-row: 1/1;
+}
+
+.suggestion-box{
+    margin-top: 55px;
+    grid-column: 2/2;
+    grid-row: 2/2;
+    background-color: #80808087;
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+
+}
+
+.suggestion-box > ul {
+    height: 200px;
+    list-style-type: none;
+    overflow-y: scroll;
+}
+
+.auto-cpl-li{
+    padding-top: 3px;
+    vertical-align: baseline;
+    height: 37px;
+}
+
+.auto-cpl-li:hover{
+    cursor: pointer;
+    color: #b91c1c;
+    background-color: #80808042;
+}
+
+@keyframes hoverzoomin {
     0%{
 
     }
     100%{
         transform: scale(1.1) translateY(-5%);
+    }
+}
+
+@keyframes hoverzoomout {
+    0%{
+        transform: scale(1.1) translateY(-5%);
+    }
+    100%{
+        transform: scale(1)
     }
 }
 
@@ -480,13 +591,57 @@ canvas {
 
 .news-circle > div{
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 20%;
     color: white;
-    padding: 15px;
+    padding: 11px;
     vertical-align: bottom;
     height: 100%;
-    line-height: 25px;
+    line-height: 20px;
+}
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+
+td, th {
+    border-top: grey solid 1px;
+    border: none;
+    text-align: left;
+    padding: 8px;
+    width: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:last-child{
+    border-top: black solid 2px;
+    font-weight: bold;
+}
+
+tr:last-child > td:not(:first-child){
+    color: red;
+}
+
+
+tr{
+    border-top: grey solid 1px;
+}
+
+
+button{
+    background-color: red;
+    color: white;
+    border: none;
+    height: 25px;
+    width: 60px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 #circ-1{
