@@ -33,7 +33,7 @@
             <i class="material-icons nav-icon">info</i>
             <span>Nastavni plan</span>
         </a>
-        <a href="#" class="nav-item nav-item-l">
+        <a id="contact-nav-btn" href="#" class="nav-item nav-item-l">
             <i class="material-icons nav-icon">all_inbox</i>
             <span>Kontakt</span>
         </a>
@@ -43,11 +43,12 @@
     <h1>Nastavni Plan</h1>
     <div class="data-container">
         <div class="search-cell">
-            <input id="subject-search" type="text" autocomplete="on">
-            <div class="suggestion-box">
-                <ul id="auto-complete-list">
-                </ul>
-            </div>
+            <h3>Dodaj kolegij u listu</h3>
+            <input id="subject-search" type="text" placeholder="Pretraži kolegije">
+                <div class="suggestion-box">
+                    <ul id="auto-complete-list">
+                    </ul>
+                </div>
         </div>
         <div class="data-cell">
             <table id="subject-table">
@@ -60,7 +61,6 @@
                     <th>Tip</th>
                     <th></th>
                 </tr>
-
             </table>
         </div>
     </div>
@@ -69,8 +69,41 @@
         <h2>ZAISKRI</h2>
     </div>
 </div>
-
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-form">
+            <i class="material-icons modal-mail-icon">email</i>
+            <h3>Kontaktirajte nas</h3>
+            <div>
+                <h4>Puno ime:</h4>
+                <input id="name-input" class="modal-input-sm" type="text">
+            </div>
+            <div>
+                <h4>Email:</h4>
+                <input id="email-input" class="modal-input-sm" type="text">
+            </div>
+            <div>
+                <h4>Vaznost poruke:</h4>
+                <input id="imporance-input" class="modal-input-sm" type="text">
+            </div>
+            <div>
+                <h4>Vasa poruka</h4>
+                <input id="msg-input" class="modal-input-bg" type="text">
+            </div>
+            <div>
+                <h4 id="news-letter-label">Primaj newsletter</h4>
+                <input id="newsletter-checkbox" type="checkbox">
+                <div class="form-submit-cell">
+                    <button id="send-form-btn">Posalji</button>
+                    <button id="exit-form-btn">Odustani</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../js/subjects-data-fetch.js"></script>
+<script src="../js/subjects/subjects-data-fetch.js"></script>
+<script src="../js/contact/contact.js"></script>
 </body>
 </html>
