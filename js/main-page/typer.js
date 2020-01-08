@@ -12,9 +12,6 @@ $(document).ready(function() {
     }
 
     function Typer() {
-        let currentText = $("#inputText").text();
-        console.log(currentText);
-
         $("#inputText").append(text[i]);
 
         i++;

@@ -30,11 +30,11 @@
             <i class="material-icons nav-icon">info</i>
             <span>Novosti</span>
         </a>
-        <a href="#" class="nav-item nav-item-l">
+        <a href="subjects.html" class="nav-item nav-item-l">
             <i class="material-icons nav-icon">info</i>
             <span>Nastavni plan</span>
         </a>
-        <a href="subjects.html" class="nav-item nav-item-l">
+        <a id="contact-nav-btn" href="#" class="nav-item nav-item-l">
             <i class="material-icons nav-icon">all_inbox</i>
             <span>Kontakt</span>
         </a>
@@ -69,6 +69,39 @@
         <h2>ZAISKRI</h2>
     </div>
 </div>
-
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-form">
+            <i class="material-icons modal-mail-icon">email</i>
+            <h3>Kontaktirajte nas</h3>
+            <div>
+                <h4>Puno ime:</h4>
+                <input id="name-input" class="modal-input-sm" type="text">
+            </div>
+            <div>
+                <h4>Email:</h4>
+                <input id="email-input" class="modal-input-sm" type="text">
+            </div>
+            <div>
+                <h4>Vaznost poruke:</h4>
+                <input id="imporance-input" class="modal-input-sm" type="text">
+            </div>
+            <div>
+                <h4>Vasa poruka</h4>
+                <input id="msg-input" class="modal-input-bg" type="text">
+            </div>
+            <div>
+                <h4 id="news-letter-label">Primaj newsletter</h4>
+                <input id="newsletter-checkbox" type="checkbox">
+                <div class="form-submit-cell">
+                    <button id="send-form-btn">Posalji</button>
+                    <button id="exit-form-btn">Odustani</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/contact/contact.js"></script>
 </body>
 </html>
