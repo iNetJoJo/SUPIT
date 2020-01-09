@@ -3,10 +3,16 @@
     padding: 0;
 }
 
+body{
+    background-image: url("../assets/img/img/algebra-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+}
+
 .navigation-container {
     width: 100%;
     position: fixed;
-    padding-left: 5em;
     height: 3em;
     background-color: black;
     color: white;
@@ -14,6 +20,11 @@
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     z-index: 5000;
+}
+
+
+#mobile-navbar-icon{
+    display: none;
 }
 
 a{
@@ -80,7 +91,6 @@ a > span {
     width: 100%;
     height: auto;
     line-height: 50px;
-    vertical-align: center !important;
     position: relative;
 }
 
@@ -106,6 +116,7 @@ a > span {
 }
 
 .main-image-container{
+    max-width: 100%;
     height: 100%;
     position: relative;
     background-image: linear-gradient(rgba(52, 26, 15, 0.83), rgba(255, 59, 0, 0.45));
@@ -178,6 +189,7 @@ canvas {
 }
 
 .main-subtitle{
+    max-width: 100%;
     text-align: center;
     grid-column: 2/4;
     grid-row: 3/3;
@@ -191,9 +203,9 @@ canvas {
 }
 
 .main-about-us-title{
-    grid-column: 5/5;
-    grid-row: 3/3;
-    text-align: right;
+    grid-column: 7/9;
+    grid-row: 4/4;
+    text-align: center;
     animation-name: fadein;
     animation-duration: 3s;
 }
@@ -215,30 +227,33 @@ canvas {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    padding-right: 130px;
-    padding-left: 130px;
-    gap: 10px;
+    padding-right: 10em;
+    padding-left: 10em;
+    gap: 1em;
 }
 
 .card{
+    max-width: 100%;
     padding: 15px;
     font-family: 'Montserrat', sans-serif;
     border: #2d304b;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .card > img{
-    margin-top: 15px;
     align-self: center;
-    width: 50%;
-    height: auto;
-    max-height: 175px;
+    width: auto;
+    height: 30%;
+    max-height: 10em;
     bottom: 0;
+    max-width: 100%;
 }
 
 .card-title{
+    max-width: 100%;
     font-weight: bold;
 }
 
@@ -248,11 +263,13 @@ canvas {
 }
 
 .card-body{
+    max-width: 100%;
     margin-top: 20px;
     font-size: 15px;
 }
 
 .breakpoint-title-container{
+    max-width: 100%;
     margin-top: 50px;
     color: #cc2222;
     text-align: center;
@@ -276,17 +293,18 @@ canvas {
 
 .history-body{
     font-size: 25px;
-    padding: 100px 300px 100px 300px;
+    padding: 5em 7em 5em 7em;
     text-align: center;
     font-family: 'Dancing Script', cursive;
     color: black;
     opacity: 0;
+    margin-top: 2em;
 }
 
 .sponsors-container{
     align-content: center;
-    padding-right: 130px;
-    padding-left: 130px;
+    padding-right: 10em;
+    padding-left: 10em;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
@@ -302,20 +320,19 @@ canvas {
     text-align: center;
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: baseline;
     justify-content: space-between;
     justify-items: center;
 }
 
 .location-info-container{
-    margin-top: 100px;
+    margin-top: 7em;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 10em;
+    padding-right: 10em;
 }
 
 .location-info-card{
@@ -348,18 +365,20 @@ canvas {
     color: white;
     text-align: center;
     background-image:linear-gradient(rgba(52, 26, 15, 0.21), rgba(255, 59, 0, 0.45)), url("../assets/img/img/zaiskri-bg.jpg");
-    padding: 50px 225px 50px 225px;
-    height: 500px;
+    padding: 2em 14em 2em 14em;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .map-container > h1 {
-    margin-top: 20px;
+    margin-top: 6em;
 }
 
 .map-container >h2{
     font-family: 'Work Sans', sans-serif;
-    margin-top: 15px;
+    margin-top: 0.5em;
     font-weight: bolder;
     font-size: 60px;
     color: #cc2222;
@@ -369,22 +388,31 @@ canvas {
 .background-laptop{
     position: relative;
     text-align: center;
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .typer{
     text-align: center;
-    padding: 1em;
     max-width: 100%;
     font-size: 4em;
     color: white;
     position:absolute;
     top: 50%;
+    left: 20%;
+    right: 20%;
     z-index:1;
+    align-content: center;
 }
 
-.typer > p, typer > span {
+.typer > p, .typer > span {
     display: inline;
+}
+
+#googleMap{
+    width:100%;
+    height:50%;
 }
 
 #shell{
@@ -393,11 +421,14 @@ canvas {
 }
 
 .news-container{
+    color: white;
     font-family: 'Montserrat', sans-serif;
     height: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr 25%;
     grid-template-columns: 1fr;
+    max-width: 100%;
+    width: 100%;
 }
 
 .news-container > h1 {
@@ -409,6 +440,7 @@ canvas {
 }
 
 .news-items{
+    max-width: 100%;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
@@ -440,6 +472,7 @@ canvas {
 }
 
 .news-circle{
+    max-width: 100%;
     cursor: pointer;
     height: 300px;
     width: 300px;
@@ -459,6 +492,7 @@ canvas {
     animation-name: hoverzoomin;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    max-width: 100%;
 }
 
 .news-circle-outer:hover:after{
@@ -858,11 +892,109 @@ button{
 
 @media (max-width: 768px) {
     video{
-        transform: scale(2.5);
+        transform: scale(7.5);
+        width: auto;
+    }
+
+    .background-laptop{
+        padding: 5em;
+    }
+
+    .typer{
+        top: 30%;
+    }
+
+    #mobile-navbar-icon{
+        align-self: end;
+        justify-self: center;
+        font-size: 40px;
+        display: unset;
+    }
+
+    .navigation-right{
+        display: none;
+    }
+
+    .cards-container{
+        padding-left: 3.5em;
+        padding-right: 1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+    }
+
+    .titleContainer{
+        text-align: center;
+        max-height: 100%;
+    }
+
+    .main-title{
+        grid-row: 1/1;
+    }
+
+    .main-subtitle{
+        grid-column: 1/6;
+        grid-row: 2/2;
+        margin-top: 1em;
+        margin-left: 3em;
+    }
+
+    .about-us-text{
+        text-align: center;
+        padding: 7px;
+        color: white;
+        font-size: 14px;
+        font-family: 'Dancing Script', cursive;
+        grid-column: 3/10;
+        grid-row: 11/8;
+        background-color: rgba(3, 3, 4, 0.48);
+        border-radius: 25px;
+    }
+
+    .main-about-us-title{
+        grid-column: 3/10;
+        grid-row: 7/7;
+    }
+
+    .main-moto{
+        display: none;
+    }
+
+    .history-body{
+        font-size: 22px;
+        padding: 0em 1em 3em 3em;
+    }
+
+    .breakpoint-title-container > i {
+        margin-left: 0.5em;
+    }
+
+    .sponsors-container{
+        grid-template-rows: repeat(4,20em);
+        grid-template-columns: repeat(2, 9.5em);
+        padding-left: 5.5em;
+        padding-right: 1em;
+        max-width: 100%;
+    }
+
+    .card > img{
+        height: 20%;
+    }
+
+    .location-info-container{
+        gap: 0.5em;
+        padding-left: 3.5em;
+        padding-right: 1em;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        font-size: 15px;
+    }
+
+    .map-container{
+        padding: 2em 1em 2em 3.5em;
     }
 }
 
 video {
-    max-width: 100%;
-    height: auto;
+    max-width: 100% !important;
+    max-height: 100% !important;
 }
