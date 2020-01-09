@@ -10,6 +10,10 @@ body{
     max-width: 100%;
 }
 
+.data-cell{
+    max-width: 100%;
+}
+
 .navigation-container {
     width: 100%;
     position: fixed;
@@ -421,6 +425,7 @@ canvas {
 }
 
 .news-container{
+    text-align: center;
     color: white;
     font-family: 'Montserrat', sans-serif;
     height: 100%;
@@ -428,15 +433,14 @@ canvas {
     grid-template-rows: 1fr 1fr 25%;
     grid-template-columns: 1fr;
     max-width: 100%;
-    width: 100%;
 }
 
 .news-container > h1 {
     height: 100px;
     padding: 100px;
-    text-align: center;
     font-size: 55px;
     font-weight: bold;
+    max-width: 100%;
 }
 
 .news-items{
@@ -455,10 +459,11 @@ canvas {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    padding: 50px;
+    padding: 3em;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 2em;
+    max-width: 100%;
 }
 
 .footer-news > h1{
@@ -487,7 +492,9 @@ canvas {
     animation-name: zoomin;
     animation-duration: 1s;
 }
-
+.news-circle-outer{
+    max-width: 100%;
+}
 .news-circle-outer:hover{
     animation-name: hoverzoomin;
     animation-duration: 1s;
@@ -505,6 +512,7 @@ canvas {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 26px;
+    max-width: 100%;
 }
 
 .news-title{
@@ -539,6 +547,7 @@ canvas {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 15%;
     padding-right: 15%;
+    max-width: 100%;
 }
 
 #subject-search{
@@ -546,19 +555,22 @@ canvas {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
     justify-self: center;
-    height: 20px;
+    height: 1.5em;
+    max-width: 100%;
     width: 100%;
 }
 
 .search-cell{
     padding-right: 7em;
     padding-left: 7em;
+    max-width: 100%;
 }
 
 .search-cell > input{
     margin-top: 50px;
     grid-column: 2/2;
     grid-row: 1/1;
+    max-width: 100%;
 }
 
 .suggestion-box{
@@ -569,6 +581,7 @@ canvas {
     max-height: 20em;
     overflow: hidden;
     border-radius: 15px;
+    max-width: 100%;
 
 }
 
@@ -748,7 +761,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #80808087;
 }
 
 tr:last-child{
@@ -991,6 +1004,42 @@ button{
 
     .map-container{
         padding: 2em 1em 2em 3.5em;
+    }
+
+    .search-cell{
+        padding-left: 6.5em;
+        padding-right: 1em;
+    }
+
+    .search-cell > h3{
+
+    }
+
+    .data-container{
+        padding-right: 5%;
+        padding-left: 5%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #subject-search{
+        width: 65%;
+    }
+
+    table{
+        transform: scale(0.75);
+    }
+
+    .map-container > h1 {
+        margin-top: 1em;
+    }
+
+    .suggestion-box{
+        width: 67%;
+    }
+
+    .suggestion-box > ul {
+        font-size: 11px;
     }
 }
 
