@@ -557,7 +557,8 @@ canvas {
     justify-self: center;
     height: 1.5em;
     max-width: 100%;
-    width: 100%;
+    width: 33em;
+    position: fixed;
 }
 
 .search-cell{
@@ -1021,11 +1022,6 @@ button{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
     }
-
-    #subject-search{
-        width: 65%;
-    }
-
     table{
         transform: scale(0.75);
     }

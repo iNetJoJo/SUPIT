@@ -47,4 +47,4 @@ $('#send-form-btn').on('click', function (e) {
             alert(errMsg);
         }
     });
-})
+});
