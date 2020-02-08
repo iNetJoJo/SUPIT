@@ -3,10 +3,66 @@
     padding: 0;
 }
 
+body{
+    background-image: url("../assets/img/img/algebra-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.dropbtn {
+    background-color: #af8c4c;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content > a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.body-black{
+    background-repeat: repeat;
+}
+
+.data-cell{
+    max-width: 100%;
+}
+
 .navigation-container {
     width: 100%;
     position: fixed;
-    padding-left: 5em;
     height: 3em;
     background-color: black;
     color: white;
@@ -14,6 +70,12 @@
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     z-index: 5000;
+    z-index: 5000;
+}
+
+
+#mobile-navbar-icon{
+    display: none;
 }
 
 a{
@@ -80,7 +142,6 @@ a > span {
     width: 100%;
     height: auto;
     line-height: 50px;
-    vertical-align: center !important;
     position: relative;
 }
 
@@ -106,6 +167,7 @@ a > span {
 }
 
 .main-image-container{
+    max-width: 100%;
     height: 100%;
     position: relative;
     background-image: linear-gradient(rgba(52, 26, 15, 0.83), rgba(255, 59, 0, 0.45));
@@ -178,6 +240,7 @@ canvas {
 }
 
 .main-subtitle{
+    max-width: 100%;
     text-align: center;
     grid-column: 2/4;
     grid-row: 3/3;
@@ -191,9 +254,9 @@ canvas {
 }
 
 .main-about-us-title{
-    grid-column: 5/5;
-    grid-row: 3/3;
-    text-align: right;
+    grid-column: 7/9;
+    grid-row: 4/4;
+    text-align: center;
     animation-name: fadein;
     animation-duration: 3s;
 }
@@ -215,30 +278,33 @@ canvas {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    padding-right: 130px;
-    padding-left: 130px;
-    gap: 10px;
+    padding-right: 10em;
+    padding-left: 10em;
+    gap: 1em;
 }
 
 .card{
+    max-width: 100%;
     padding: 15px;
     font-family: 'Montserrat', sans-serif;
     border: #2d304b;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .card > img{
-    margin-top: 15px;
     align-self: center;
-    width: 50%;
-    height: auto;
-    max-height: 175px;
+    width: auto;
+    height: 30%;
+    max-height: 10em;
     bottom: 0;
+    max-width: 100%;
 }
 
 .card-title{
+    max-width: 100%;
     font-weight: bold;
 }
 
@@ -248,11 +314,13 @@ canvas {
 }
 
 .card-body{
+    max-width: 100%;
     margin-top: 20px;
     font-size: 15px;
 }
 
 .breakpoint-title-container{
+    max-width: 100%;
     margin-top: 50px;
     color: #cc2222;
     text-align: center;
@@ -276,17 +344,18 @@ canvas {
 
 .history-body{
     font-size: 25px;
-    padding: 100px 300px 100px 300px;
+    padding: 5em 7em 5em 7em;
     text-align: center;
     font-family: 'Dancing Script', cursive;
     color: black;
     opacity: 0;
+    margin-top: 2em;
 }
 
 .sponsors-container{
     align-content: center;
-    padding-right: 130px;
-    padding-left: 130px;
+    padding-right: 10em;
+    padding-left: 10em;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
@@ -302,20 +371,19 @@ canvas {
     text-align: center;
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: baseline;
     justify-content: space-between;
     justify-items: center;
 }
 
 .location-info-container{
-    margin-top: 100px;
+    margin-top: 7em;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 10em;
+    padding-right: 10em;
 }
 
 .location-info-card{
@@ -348,18 +416,20 @@ canvas {
     color: white;
     text-align: center;
     background-image:linear-gradient(rgba(52, 26, 15, 0.21), rgba(255, 59, 0, 0.45)), url("../assets/img/img/zaiskri-bg.jpg");
-    padding: 50px 225px 50px 225px;
-    height: 500px;
+    padding: 2em 14em 2em 14em;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .map-container > h1 {
-    margin-top: 20px;
+    margin-top: 6em;
 }
 
 .map-container >h2{
     font-family: 'Work Sans', sans-serif;
-    margin-top: 15px;
+    margin-top: 0.5em;
     font-weight: bolder;
     font-size: 60px;
     color: #cc2222;
@@ -369,22 +439,31 @@ canvas {
 .background-laptop{
     position: relative;
     text-align: center;
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .typer{
     text-align: center;
-    padding: 1em;
     max-width: 100%;
     font-size: 4em;
     color: white;
     position:absolute;
     top: 50%;
+    left: 20%;
+    right: 20%;
     z-index:1;
+    align-content: center;
 }
 
-.typer > p, typer > span {
+.typer > p, .typer > span {
     display: inline;
+}
+
+#googleMap{
+    width:100%;
+    height:50%;
 }
 
 #shell{
@@ -393,40 +472,55 @@ canvas {
 }
 
 .news-container{
+    text-align: center;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 25%;
+    grid-template-rows: 22em 35em 33em;
     grid-template-columns: 1fr;
+    max-width: 100%;
+}
+
+.news-article-container{
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 22em 28em 33em;
+    grid-template-columns: 1fr;
+    max-width: 100%;
 }
 
 .news-container > h1 {
     height: 100px;
     padding: 100px;
-    text-align: center;
     font-size: 55px;
     font-weight: bold;
+    max-width: 100%;
 }
 
 .news-items{
+    max-width: 100%;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
-    padding-left: 15%;
-    gap: 150px;
-    padding-right: 15%;
+    gap: 5em;
+    justify-self: center;
     padding-bottom: 30px;
+    overflow: visible;
 }
 
 .footer-news{
     background-image: url("../assets/img/img/zaiskri-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
-    padding: 50px;
+    padding: 3em;
+    padding: 2em;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 2em;
 }
 
 .footer-news > h1{
@@ -440,25 +534,29 @@ canvas {
 }
 
 .news-circle{
+    margin: 0;
+    max-width: 100%;
     cursor: pointer;
-    height: 300px;
-    width: 300px;
+    height: 25em;
+    width: 25em;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding-top: 20px;
     text-align: center;
     background-size: cover;
     border-radius: 50%;
-    border: whitesmoke solid;
-    border-width: 20px;
+    border: 20px solid whitesmoke;
     box-shadow: 10px 0 #80808036, 0 10px #80808036, -10px 0 #80808036, 0 -10px #80808036;
     animation-name: zoomin;
     animation-duration: 1s;
 }
-
+.news-circle-outer{
+    max-width: 100%;
+}
 .news-circle-outer:hover{
     animation-name: hoverzoomin;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    max-width: 100%;
 }
 
 .news-circle-outer:hover:after{
@@ -471,6 +569,7 @@ canvas {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 26px;
+    max-width: 100%;
 }
 
 .news-title{
@@ -505,26 +604,27 @@ canvas {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 15%;
     padding-right: 15%;
+    max-width: 100%;
 }
 
 #subject-search{
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
     justify-self: center;
-    height: 20px;
+    height: 1.5em;
+    max-width: 100%;
     width: 100%;
 }
 
 .search-cell{
     padding-right: 7em;
     padding-left: 7em;
+    max-width: 100%;
 }
 
 .search-cell > input{
     margin-top: 50px;
     grid-column: 2/2;
     grid-row: 1/1;
+    max-width: 100%;
 }
 
 .suggestion-box{
@@ -535,6 +635,7 @@ canvas {
     max-height: 20em;
     overflow: hidden;
     border-radius: 15px;
+    max-width: 100%;
 
 }
 
@@ -547,7 +648,7 @@ canvas {
 .auto-cpl-li{
     padding-top: 3px;
     vertical-align: baseline;
-    height: 37px;
+    height: 3.5em;
 }
 
 .auto-cpl-li:hover{
@@ -714,7 +815,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #80808087;
 }
 
 tr:last-child{
@@ -844,25 +945,166 @@ button{
         0%{opacity: 0;}
         100%{opacity: 1;}
     }
+
+    .news-items{
+        max-width: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        gap: 5%;
+        padding-bottom: 30px;
+        justify-items: center;
+    }
+
+    .news-circle{
+        height: 15em;
+        width: 15em;
+    }
+
+
+    .news-circle > div{
+        font-size: 16px;
+    }
+
+    .news-container{
+        grid-template-rows: 22em 75em 33em;
+    }
+
+    .news-body{
+        font-size: 13px;
+        padding: 15%;
+    }
+
+    .news-title{
+        font-size: 11px;
+    }
 }
 
 @media (max-width: 1200px){
     .typer{
         font-size: 35px;
     }
-
-    video{
-        transform: scale(1.3);
-    }
 }
 
 @media (max-width: 768px) {
-    video{
-        transform: scale(2.5);
-    }
-}
 
-video {
-    max-width: 100%;
-    height: auto;
+    .typer{
+        top: 30%;
+    }
+
+    #mobile-navbar-icon{
+        align-self: end;
+        justify-self: center;
+        font-size: 40px;
+        display: unset;
+    }
+
+    .navigation-right{
+        display: none;
+    }
+
+    .cards-container{
+        padding-left: 3.5em;
+        padding-right: 1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+    }
+
+    .titleContainer{
+        text-align: center;
+        max-height: 100%;
+    }
+
+    .main-title{
+        grid-row: 1/1;
+    }
+
+    .main-subtitle{
+        grid-column: 1/6;
+        grid-row: 2/2;
+        margin-top: 1em;
+        margin-left: 3em;
+    }
+
+    .about-us-text{
+        text-align: center;
+        padding: 7px;
+        color: white;
+        font-size: 14px;
+        font-family: 'Dancing Script', cursive;
+        grid-column: 3/10;
+        grid-row: 11/8;
+        background-color: rgba(3, 3, 4, 0.48);
+        border-radius: 25px;
+    }
+
+    .main-about-us-title{
+        grid-column: 3/10;
+        grid-row: 7/7;
+    }
+
+    .main-moto{
+        display: none;
+    }
+
+    .history-body{
+        font-size: 22px;
+        padding: 0em 1em 3em 3em;
+    }
+
+    .breakpoint-title-container > i {
+        margin-left: 0.5em;
+    }
+
+    .sponsors-container{
+        grid-template-rows: repeat(4,20em);
+        grid-template-columns: repeat(2, 9.5em);
+        padding-left: 3.5em;
+        padding-right: 1em;
+        max-width: 100%;
+    }
+
+    .card > img{
+        height: 20%;
+    }
+
+    .location-info-container{
+        gap: 0.5em;
+        padding-left: 3.5em;
+        padding-right: 1em;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        font-size: 15px;
+    }
+
+    .map-container{
+        padding: 2em 1em 2em 3.5em;
+    }
+
+    .search-cell{
+        padding-left: 6.5em;
+        padding-right: 1em;
+    }
+
+    .search-cell > h3{
+
+    }
+
+    .data-container{
+        padding-right: 5%;
+        padding-left: 5%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    table{
+        transform: scale(0.75);
+    }
+
+    .map-container > h1 {
+        margin-top: 1em;
+    }
+
+    .suggestion-box > ul {
+        font-size: 11px;
+    }
 }
