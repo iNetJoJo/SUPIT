@@ -7,7 +7,11 @@ body{
     background-image: url("../assets/img/img/algebra-background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 100%;
+    height: 100%;
+}
+
+.body-black{
+    background-repeat: repeat;
 }
 
 .data-cell{
@@ -23,6 +27,7 @@ body{
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    z-index: 5000;
     z-index: 5000;
 }
 
@@ -430,7 +435,7 @@ canvas {
     font-family: 'Montserrat', sans-serif;
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 25%;
+    grid-template-rows: 22em 35em 33em;
     grid-template-columns: 1fr;
     max-width: 100%;
 }
@@ -448,22 +453,21 @@ canvas {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
-    padding-left: 15%;
-    gap: 150px;
-    padding-right: 15%;
+    gap: 5em;
+    justify-self: center;
     padding-bottom: 30px;
+    overflow: visible;
 }
 
 .footer-news{
     background-image: url("../assets/img/img/zaiskri-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
     padding: 3em;
+    padding: 2em;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
     font-size: 2em;
-    max-width: 100%;
 }
 
 .footer-news > h1{
@@ -477,17 +481,17 @@ canvas {
 }
 
 .news-circle{
+    margin: 0;
     max-width: 100%;
     cursor: pointer;
-    height: 300px;
-    width: 300px;
+    height: 25em;
+    width: 25em;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding-top: 20px;
     text-align: center;
     background-size: cover;
     border-radius: 50%;
-    border: whitesmoke solid;
-    border-width: 20px;
+    border: 20px solid whitesmoke;
     box-shadow: 10px 0 #80808036, 0 10px #80808036, -10px 0 #80808036, 0 -10px #80808036;
     animation-name: zoomin;
     animation-duration: 1s;
@@ -551,14 +555,10 @@ canvas {
 }
 
 #subject-search{
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
     justify-self: center;
     height: 1.5em;
     max-width: 100%;
-    width: 33em;
-    position: fixed;
+    width: 100%;
 }
 
 .search-cell{
@@ -595,7 +595,7 @@ canvas {
 .auto-cpl-li{
     padding-top: 3px;
     vertical-align: baseline;
-    height: 37px;
+    height: 3.5em;
 }
 
 .auto-cpl-li:hover{
@@ -891,6 +891,30 @@ button{
     @keyframes navbar-left-slidein {
         0%{opacity: 0;}
         100%{opacity: 1;}
+    }
+
+    .news-items{
+        max-width: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        gap: 5%;
+        padding-bottom: 30px;
+        justify-items: center;
+    }
+
+    .news-circle{
+        height: 15em;
+        width: 15em;
+    }
+
+
+    .news-circle > div{
+        font-size: 16px;
+    }
+
+    .news-container{
+        grid-template-rows: 22em 75em 33em;
     }
 }
 
